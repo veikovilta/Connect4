@@ -324,6 +324,8 @@ void DrawBoard(window win[], int coloredWin[COLORED_ROWS][COLORED_COLS])
 
 	HowToUse(FUNCTION_GAME_BOARD); 
 	
+	move(0, 0); 
+	
 	int maxY, maxX;
     getmaxyx(stdscr, maxY, maxX);
     
