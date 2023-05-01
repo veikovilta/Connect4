@@ -21,7 +21,7 @@ board.o: board.c board.h
 menu.o: menu.c menu.h
 	$(CC) $(CFLAGS) -c menu.c
 	
-main.o: main.c main.h
+main.o: main.c
 	$(CC) $(CFLAGS) -c main.c
 
 .PHONY: clean cleanobj
