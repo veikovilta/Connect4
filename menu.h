@@ -1,7 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#define ARRAY_SIZE(a) ((unsigned)sizeof(a) / (unsigned)sizeof(a[0]))
+//#define ARRAY_SIZE(a) ((unsigned)sizeof(a) / (unsigned)sizeof(a[0]))
 
 enum functions{
     FUNCTION_MENU,
