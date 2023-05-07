@@ -35,7 +35,7 @@ int MainMenu(WINDOW *mainMenuWin)
 
 	getmaxyx(stdscr, maxY, maxX);
 	
-	mainMenuWin = newwin(ARRAY_SIZE(mainMenuWin) + 7, 13, 10, maxX / 2 - 13);
+	mainMenuWin = newwin(7, 13, 10, maxX / 2 - 13);
 	
 	box(mainMenuWin, 0, 0);
 	
@@ -50,7 +50,7 @@ int MainMenu(WINDOW *mainMenuWin)
         getmaxyx(stdscr, maxY, maxX);
         
         // Print the menu options, with the selected option highlighted using standout
-        for (int i = 0; i < (int)ARRAY_SIZE(mainMenu); i++) 
+        for (int i = 0; i < 3; i++) 
         {
             if (i == selected) 
             {
@@ -93,7 +93,7 @@ int MainMenu(WINDOW *mainMenuWin)
                 
                 break;
             case KEY_DOWN:
-                if (selected < (int)ARRAY_SIZE(mainMenu) - 1) 
+                if (selected < 2) 
                 {
                     selected++;
                 }
@@ -125,7 +125,7 @@ bool PlayAgainMenu(WINDOW *playAgainMenuWin)
 	
 	getmaxyx(stdscr, maxY, maxX);
 	
-	playAgainMenuWin = newwin(ARRAY_SIZE(playAgainMenuWin) + 5, 15, 10, maxX / 2 - 13);
+	playAgainMenuWin = newwin(5, 15, 10, maxX / 2 - 13);
 	
 	box(playAgainMenuWin, 0, 0);
 	
@@ -140,7 +140,7 @@ bool PlayAgainMenu(WINDOW *playAgainMenuWin)
         getmaxyx(stdscr, maxY, maxX);
         
         // Print the menu options, with the selected option highlighted using standout
-        for (int i = 0; i < (int)ARRAY_SIZE(playAgainMenu); i++) 
+        for (int i = 0; i < 2; i++) 
         {
             if (i == selected) 
             {
@@ -184,7 +184,7 @@ bool PlayAgainMenu(WINDOW *playAgainMenuWin)
                 
                 break;
             case KEY_DOWN:
-                if (selected < (int)ARRAY_SIZE(playAgainMenu) - 1) 
+                if (selected < 1) 
                 {
                     selected++;
                 }
@@ -218,7 +218,7 @@ bool NameMenu(WINDOW *nameMenuWin)
 	
 	getmaxyx(stdscr, maxY, maxX);
 	
-	nameMenuWin = newwin(ARRAY_SIZE(nameMenuWin) + 5, 15, 10, maxX / 2 - 13);
+	nameMenuWin = newwin(5, 15, 10, maxX / 2 - 13);
 	
 	box(nameMenuWin, 0, 0);
 	
@@ -233,7 +233,7 @@ bool NameMenu(WINDOW *nameMenuWin)
         getmaxyx(stdscr, maxY, maxX);
         
         // Print the menu options, with the selected option highlighted using standout
-        for (int i = 0; i < (int)ARRAY_SIZE(nameMenu); i++) 
+        for (int i = 0; i < 2; i++) 
         {
             if (i == selected) 
             {
@@ -277,7 +277,7 @@ bool NameMenu(WINDOW *nameMenuWin)
                 
                 break;
             case KEY_DOWN:
-                if (selected < (int)ARRAY_SIZE(nameMenu) - 1) 
+                if (selected < 1) 
                 {
                     selected++;
                 }
